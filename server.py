@@ -1,12 +1,15 @@
 #!/usr/bin/env python2.7
 
 import subprocess
-from flask import Flask, request
+from flask import Flask
+from flask import request
+from flask import render_template
 app = Flask(__name__, static_url_path='/')
 
 @app.route("/")
 def root():
-    return app.send_static_file('index.html')
+    return render_template('index.html')
+
 @app.route("/post", methods=['POST'])
 def result():
     name   = request.form['name']
