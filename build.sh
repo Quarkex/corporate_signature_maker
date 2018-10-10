@@ -72,9 +72,9 @@ for file in in/*.txt; do
         -pointsize 16 \
         -font fonts/arial.ttf \
         -fill black \
-        -annotate +545+40 "$caption_line_1"\
-        -annotate +545+64 "$caption_line_2"\
-        -annotate +545+88 "$caption_line_3"\
+        -annotate +565+40 "$caption_line_1"\
+        -annotate +565+64 "$caption_line_2"\
+        -annotate +565+88 "$caption_line_3"\
         "out/$job - $name.png"
     image="$(cat "out/$job - $name.png" | base64 | paste -s -d' ')"
     cat << EOF > "out/$job - $name.htm"
